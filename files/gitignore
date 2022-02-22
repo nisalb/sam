@@ -1,0 +1,6 @@
+# ccls caches and files
+.ccls-cache/
+compile_commands.json
+
+# executable files
+build/
