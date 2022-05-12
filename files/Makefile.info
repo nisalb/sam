@@ -9,7 +9,10 @@ include_dirs =
 compiler = g++
 
 # Any additional compiler flags.
-compiler_flags = -Wall -Wextra -g -O1 -std=c++14
+compiler_flags = -Wall -Wextra -O2 -std=c11
+
+# These flags are enabled when DEBUG=1 is defined
+debug_flags = -g3
 
 # Preprocessor flags. This is the same as compiler_flags for now
 cpp_flags =

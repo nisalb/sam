@@ -55,6 +55,13 @@ else
 	bear =
 endif
 
+# Enable debug compiler flags
+ifeq ($(DEBUG),1)
+	debug = $(debug_flags)
+else
+	debug =
+endif
+
 targets_list =
 
 # function for generating rules to generate target binaries
@@ -68,7 +75,7 @@ $(addprefix $(build_dir)/, $(1)): $(addprefix $(source_dir)/, $(addprefix $(2)/,
 	@echo -en "$(c.info)==>$(c.norm) TARGET: "
 	@echo $(1) | tee .last_make
 	@echo -en "    Building $$@ ...\n    "
-	$(hide)$(bear) $(compiler) $(cpp_flags) $(compiler_flags) $(includes) -o $$@ $$^
+	$(hide)$(bear) $(compiler) $(cpp_flags) $(compiler_flags) $(debug) $(includes) -o $$@ $$^
 	@echo -e  "$(c.succ)***$(c.norm) DONE." # these start and end messages are useful when making with emacs
 endef
 
