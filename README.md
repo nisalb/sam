@@ -1,4 +1,4 @@
-# Example
+# SAM
 
 This is a script to manage example codes in a programming textbook. When I was reading programming books, It was tedious
 to write and compile many example codes by hand. So I decided to automate this comple-and-run process, plus I wanted to
